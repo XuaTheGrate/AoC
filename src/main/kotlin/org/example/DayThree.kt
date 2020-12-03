@@ -10,13 +10,15 @@ class DayThree: Day {
     private var pos = Position(0, 0)
 
     override fun preprocess() {
-        data = runBlocking<String> { return@runBlocking collect(3) }.split('\n').map { it.map { it }.toMutableList() }.toMutableList()
+        data = runBlocking<String> { return@runBlocking collect(3) }
+                .split('\n')
+                .map { it.
+                    map { it }
+                    .toMutableList() }
+                .toMutableList()
     }
 
-    private fun getStep(): Boolean {
-        val x = data[pos.y]
-        return x[pos.x] == '#'
-    }
+    private fun getStep() = data[pos.y][pos.x] == '#'
 
     private fun traverseStep(x: Int, y: Int): Boolean {
         pos.x += x

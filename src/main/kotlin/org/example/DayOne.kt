@@ -7,9 +7,12 @@ class DayOne: Day {
     lateinit var nums: Array<Int>
 
     override fun preprocess() {
-        val data = runBlocking<String> { return@runBlocking collect(1) }
-        // println(data)
-        nums = data.split('\n').map { it.trim('\n', ' ') }.filter { it.isNotEmpty() }.map { it.toInt() }.toTypedArray()
+        nums = runBlocking<String> { return@runBlocking collect(1) }
+                .split("\n")
+                .map { it.trim('\n', ' ') }
+                .filter { it.isNotEmpty() }
+                .map { it.toInt() }
+                .toTypedArray()
     }
 
     override fun partOne() {

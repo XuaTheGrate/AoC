@@ -19,7 +19,8 @@ class DayTwo: Day {
                             groups[3]!!.value[0],
                             groups[4]!!.value
                     )
-                }.toTypedArray()
+                }
+                .toTypedArray()
     }
 
     override fun partOne() {
@@ -27,10 +28,8 @@ class DayTwo: Day {
 
         passwords.forEach {
             val (range, char, pw) = it
-            if (pw.count { it == char } in range) {
+            if (pw.count { it == char } in range)
                 valid++
-            }
-
         }
         println("$valid valid passwords detected")
     }
