@@ -7,4 +7,6 @@ fun main() {
     DayTwo().main()
     println("\nDay Three:")
     DayThree().main()
+    println("\nDay Four:")
+    DayFour().main()
 }

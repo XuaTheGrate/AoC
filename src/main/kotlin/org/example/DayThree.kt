@@ -12,9 +12,7 @@ class DayThree: Day {
     override fun preprocess() {
         data = runBlocking<String> { return@runBlocking collect(3) }
                 .split('\n')
-                .map { it.
-                    map { it }
-                    .toMutableList() }
+                .map { it.toMutableList() }
                 .toMutableList()
     }
 
