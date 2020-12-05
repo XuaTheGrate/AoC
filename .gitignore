@@ -4,3 +4,4 @@ gradle/
 **/resources/
 build/
 src/test/
+*.txt
