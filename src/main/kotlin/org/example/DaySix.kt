@@ -26,14 +26,10 @@ class DaySix: Day {
         val nums = data.map { group ->
             val groups = group.split("\n")
             var main = groups[0].toSet()
-            if (groups.size == 1)
-                main.size
-            else {
-                groups.forEach {
-                    main = main.intersect(it.toSet())
-                }
-                main.size
+            groups.forEach {
+                main = main.intersect(it.toSet())
             }
+            main.size
         }
         println("Sum = ${nums.reduce { a, v -> a + v }}")
     }
