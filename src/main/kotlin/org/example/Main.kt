@@ -17,4 +17,8 @@ fun main() {
     DaySeven().main()
     println("\nDay Eight:")
     DayEight().main()
+    println("\nDay Nine:")
+    DayNine().main()
+    println("\nDay Ten:")
+    DayTen().main()
 }
